@@ -39,20 +39,20 @@ class Stack:
 
         # iterate through linked list
         itr = self.head
-        llstr = ''
+        sstr = ''
 
         # append all elements to string
         while itr:
             # print(itr.data)
-            llstr = llstr + str(itr.data) + '->'
+            sstr = sstr + str(itr.data) + '->'
             itr = itr.nxt
 
         # print the string
-        print(llstr)
+        print(sstr)
 
     def push(self, data):
         '''
-        Function to insert an element at the end of the linked list
+        Function to insert an element at the beginning of the stack
         '''
 
         if self.head == None:
