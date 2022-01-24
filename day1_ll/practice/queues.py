@@ -19,7 +19,7 @@ class Node:
 class Queue:
 
     '''
-    Class to implement the functions of a linked list
+    Class to implement the functions of a queue
     '''
 
     def __init__(self):
@@ -29,7 +29,7 @@ class Queue:
 
     def print_q(self):
         '''
-        Function to print the elements of the linked list
+        Function to print the elements of the queue
         '''
 
         # check if linked list is empty
@@ -79,7 +79,7 @@ class Queue:
 
     def get_len(self):
         '''
-        Function to get the length of the linked list
+        Function to get the length of the queue
         '''
 
         itr = self.head
@@ -92,7 +92,7 @@ class Queue:
 
     def pop(self):
         '''
-        Function to remove an element at the given index from linked list
+        Function to remove an element at the given index from queue
         '''
         # popping the first element
 
@@ -100,7 +100,6 @@ class Queue:
             print('Cannot pop from empty stack')
             return
         itr = self.head
-
 
         removed = itr.data
         self.head = itr.nxt

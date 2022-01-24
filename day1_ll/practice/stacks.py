@@ -19,7 +19,7 @@ class Node:
 class Stack:
 
     '''
-    Class to implement the functions of a linked list
+    Class to implement the functions of a stack
     '''
 
     def __init__(self):
@@ -87,7 +87,7 @@ class Stack:
 
     def pop(self):
         '''
-        Function to remove an element at the given index from linked list
+        Function to pop an element from the stack
         '''
         # popping the last element
 
