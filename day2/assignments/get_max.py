@@ -35,7 +35,7 @@ class Stack:
 
         # check if linked list is empty
         if self.head == None:
-            print("Linked List is empty.")
+            print("Stack is empty.")
             return
 
         # iterate through linked list
@@ -49,7 +49,7 @@ class Stack:
             itr = itr.nxt
 
         # print the string
-        print(sstr)
+        print('The stack is: {}'.format(sstr))
 
     def push(self, data):
         '''
@@ -108,21 +108,39 @@ class Stack:
         return removed
 
     def get_max(self):
-        max = -10000000
-        itr = self.head
-        for i in range(self.get_len()):
-            if itr.data > max:
-                max = itr.data
-                itr = itr.nxt
-        return max
+        if self.get_len() <= 0:
+            print('The stack is empty')
+            return None
+        else:
+            max = -10000000
+            itr = self.head
+            for i in range(self.get_len()):
+                if itr.data > max:
+                    max = itr.data
+                    itr = itr.nxt
+            return max
 
 
 if __name__ == '__main__':
+    n = int(input('Enter n: '))
     stck = Stack()
-    stck.push(10)
-    stck.push(15)
-    stck.push(20)
-    print('The max value in the stack is: {}'.format(stck.get_max()))
-    stck.print_stack()
-    print('Element {} popped from stack'.format(stck.pop()))
-    stck.print_stack()
+    for i in range(n):
+        query = list(map(int, input('Enter the query \n1. push - enter 1 <element to be pushed> e.g.: 1 23\n2. pop\n3. get max element\n4. quit \n').split()))
+        if query[0] == 4:
+            exit
+        elif query[0] == 1:
+            if len(query) != 2:
+                print('The input format is wrong, please enter the input again.')
+            else:
+                stck.push(query[1])
+        elif query[0] == 2:
+            stck.pop()
+        elif query[0] == 3:
+            print('The maximum element in the stack is: {}'.format(stck.get_max()))
+        else:
+            print('Wrong input. Please try again.')
+            exit
+    
+                
+            
+stck.print_stack()
