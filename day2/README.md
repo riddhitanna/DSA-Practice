@@ -6,4 +6,5 @@ Practice codes for Data Structures and Algorithms
 
 - Practice
 1. Stock span problem using stacks 
+2. Trial commit using Git command line
 
