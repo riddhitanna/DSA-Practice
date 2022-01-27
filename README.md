@@ -7,3 +7,7 @@ Day 1:
 Day 2:
 - Stacks
 - Stock span problem 
+
+Day 3:
+- Hashing, heaps
+- Shortest Job First scheduling
