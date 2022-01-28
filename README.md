@@ -11,3 +11,6 @@ Day 2:
 Day 3:
 - Hashing, heaps
 - Shortest Job First scheduling
+
+Day 4: 
+- Hashing
